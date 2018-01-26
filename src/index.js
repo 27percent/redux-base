@@ -13,6 +13,7 @@ console.log('Hello World!');
 //   <Layout />
 // </Provider>, app);
 
+import './styles/index.scss'
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'

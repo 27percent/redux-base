@@ -1,9 +1,7 @@
 // 3rd Party Modules
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const fs = require('fs');
 const path = require('path');
-const htmlPath = path.resolve(fs.realpathSync(process.cwd()), 'public/index.html');
 
 module.exports = {
   devtool: 'source-map',
@@ -11,7 +9,7 @@ module.exports = {
     new UglifyJSPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: htmlPath,
+      template: path.resolve(__dirname, 'public', 'index.html'),
       minify: {
         removeComments: true,
         collapseWhitespace: true,

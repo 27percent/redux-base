@@ -1,15 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-const fs = require('fs');
 const path = require('path');
-const htmlPath = path.resolve(fs.realpathSync(process.cwd()), 'public/index.html');
 
 module.exports = {
   devtool: 'inline-source-map',
   devServer: {
-    host: '0.0.0.0',
+    host: 'localhost',
     inline: true,
-    port: 8080,
+    port: 8086,
     // stats: 'errors-only'
     contentBase: path.resolve(__dirname, 'dist'),
     publicPath: '/',
@@ -21,23 +19,23 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: htmlPath,
+      template: path.resolve(__dirname, 'public', 'index.html')
     }),
   ],
   stats: {
-    hash: false,
-    version: false,
-    timings: false,
-    assets: false,
-    chunks: false,
-    modules: false,
-    reasons: false,
-    children: false,
-    source: false,
+    hash: true,
+    version: true,
+    timings: true,
+    assets: true,
+    chunks: true,
+    modules: true,
+    reasons: true,
+    children: true,
+    source: true,
     errors: true,
-    errorDetails: false,
+    errorDetails: true,
     warnings: true,
-    publicPath: false
+    publicPath: true
   }
 };
 

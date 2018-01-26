@@ -4,6 +4,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const ENV = process.env.NODE_ENV || 'development';
 
@@ -25,8 +26,11 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        test:/\.(s*)css$/, 
+        use: ExtractTextPlugin.extract({ 
+          fallback:'style-loader',
+          use:['css-loader','sass-loader'],
+        })
       },
       {
         test: /\.json$/,
@@ -55,7 +59,7 @@ module.exports = {
     new ManifestPlugin(),
     new CleanWebpackPlugin(['dist']),
     new webpack.NamedModulesPlugin(),
-
+    new ExtractTextPlugin({filename:'bundle.css'}),
     new CircularDependencyPlugin({
       exclude: /a\.js|node_modules/,
       failOnError: true,
