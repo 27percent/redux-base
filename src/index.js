@@ -16,15 +16,28 @@ console.log('Hello World!');
 import './styles/index.scss'
 import React from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
-import Root from './containers/Root'
 import configureStore from './store/configureStore'
 
-const store = configureStore()
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { ConnectedRouter } from 'react-router-redux'
+
+import App from './containers/App'
+import ConfiguratorPageContainer from './containers/ConfiguratorPageContainer'
+
+import createBrowserHistory from 'history/createBrowserHistory';
+const history = createBrowserHistory();
+
+const store = configureStore(undefined, history);
 
 render(
-  <Router>
-    <Root store={store} />
-  </Router>,
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <Switch>
+        <Route exact path="/" component={App}/>
+        <Route path="/composer" component={ConfiguratorPageContainer}/>
+      </Switch>
+    </ConnectedRouter>
+  </Provider>,
   document.getElementById('root')
 )

@@ -2,33 +2,10 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
 import classNames from 'classnames';
 
 class ConfiguratorPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-      showSidebar: false,
-      showSidebarWide: false
-    };
-  }
   static propTypes = {}
-
-  toggleSidebar = () => {
-    this.setState({
-      showSidebar: !this.state.showSidebar,
-      showSidebarWide: false
-    });
-  }
-
-  toggleSidebarWide = () => {
-    this.setState({
-      showSidebar: false,
-      showSidebarWide: !this.state.showSidebarWide
-    });
-  }
 
   render() {
     
@@ -51,8 +28,8 @@ class ConfiguratorPage extends Component {
               </div>
 
               <div className='o-flex-full-height c-header__right'>
-                <a className='o-btn o-btn-secondary u-mr- u-mb0' onClick={this.toggleSidebar}>Sidebar</a>
-                <a className='o-btn o-btn-secondary u-mr- u-mb0' onClick={this.toggleSidebarWide}>Sidebar Wide</a>
+                <a className='o-btn o-btn-secondary u-mr- u-mb0' onClick={this.props.toggleSidebar}>Sidebar</a>
+                <a className='o-btn o-btn-secondary u-mr- u-mb0' onClick={this.props.toggleSidebarWide}>Sidebar Wide</a>
                 <a className='o-btn o-btn-primary u-mr- u-mb0'>Load</a>
                 <a className='o-btn o-btn-success u-mb0'>Save</a>
               </div>              
@@ -84,7 +61,7 @@ class ConfiguratorPage extends Component {
           </div>
         </section>
 
-        <aside className={classNames('o-flex-container o-overflow-y-scrollable o-flex-100 o-light c-layout-main__right-column', {'c-layout-main__right-column--open': this.state.showSidebar}, {'c-layout-main__right-column--open-wide': this.state.showSidebarWide} )}>
+        <aside className={classNames('o-flex-container o-overflow-y-scrollable o-flex-100 o-light c-layout-main__right-column', {'c-layout-main__right-column--open': this.props.sidebar.open}, {'c-layout-main__right-column--open-wide': this.props.sidebar.openWide} )}>
           <div>
             <h2>Key</h2>
             { 
@@ -120,15 +97,4 @@ class ConfiguratorPage extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-  return { }
-}
-
-const mapDispatchToProps = dispatch => {
-  return { }
-}
-
-export default withRouter(connect(
-  mapStateToProps, 
-  mapDispatchToProps
-)(ConfiguratorPage))
+export default ConfiguratorPage;
