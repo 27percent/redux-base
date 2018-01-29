@@ -1,0 +1,137 @@
+.o-btn-primary {
+  background-color: $brand-secondary;
+  border-color: $brand-secondary;
+  color: $brand-secondary__text;
+  
+  &:focus,
+  &:hover {
+    background-color: $brand-secondary--light;
+    border-color: $brand-secondary--light;
+    color: $brand-secondary__text;
+  }
+
+  &[disabled] {
+    opacity: .5;
+
+    &:focus,
+    &:hover {
+      background-color: $brand-secondary;
+      border-color: $brand-secondary;
+    }
+  } 
+}
+
+.o-btn-secondary {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $brand-primary__text;
+  
+  &:focus,
+  &:hover {
+    background-color: $brand-primary--light;
+    border-color: $brand-primary--light;
+    color: $brand-primary__text;
+  }
+
+  &[disabled] {
+    opacity: .5;
+
+    &:focus,
+    &:hover {
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+    }
+  }  
+}
+
+.o-btn-tertiary {
+  background-color: $brand-tertiary;
+  border-color: $brand-tertiary;
+  color: $brand-tertiary__text;
+  
+  &:focus,
+  &:hover {
+    background-color: $brand-tertiary--light;
+    border-color: $brand-tertiary--light;
+    color: $brand-tertiary__text;
+  }
+
+  &[disabled] {
+    opacity: .5;
+
+    &:focus,
+    &:hover {
+      background-color: $brand-tertiary;
+      border-color: $brand-tertiary;
+    }
+  } 
+}
+
+.o-btn-quaternary {
+  background-color: $brand-quaternary;
+  border-color: $brand-quaternary;
+  color: $brand-quaternary__text;
+  
+  &:focus,
+  &:hover {
+    background-color: $brand-quaternary--dark;
+    border-color: $brand-quaternary--dark;
+    color: $brand-quaternary__text;
+  }
+
+  &[disabled] {
+    opacity: .5;
+
+    &:focus,
+    &:hover {
+      background-color: $brand-quaternary;
+      border-color: $brand-quaternary;
+    }
+  } 
+}
+
+.o-btn-success {
+  background-color: $success;
+  border-color: $success;
+  color: $success__text;
+  
+  &:focus,
+  &:hover {
+    background-color: $success--light;
+    border-color: $success--light;
+    color: $success__text;
+  }
+
+  &[disabled] {
+    opacity: .5;
+
+    &:focus,
+    &:hover {
+      background-color: $success;
+      border-color: $success;
+    }
+  } 
+}
+
+.o-btn-warning {
+  background-color: $warning;
+  border-color: $warning;
+  color: $warning__text;
+  
+  &:focus,
+  &:hover {
+    background-color: $warning--light;
+    border-color: $warning--light;
+    color: $warning__text;
+  }
+
+  &[disabled] {
+    opacity: .5;
+
+    &:focus,
+    &:hover {
+      background-color: $warning;
+      border-color: $warning;
+    }
+  } 
+}

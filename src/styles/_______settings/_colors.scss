@@ -1,10 +1,99 @@
+// =============================================================================
+// Brand colors
+// =============================================================================
+$brand-primary: #f15a29;
+$brand-primary__text: #fff;
+$brand-primary--light: lighten($brand-primary, 20);
+$brand-primary--dark: darken($brand-primary, 20);
+$brand-secondary: #2baae1;
+$brand-secondary__text: #fff;
+$brand-secondary--light: lighten($brand-secondary, 20);
+$brand-secondary--dark: darken($brand-secondary, 20);
+$brand-tertiary: #0e2f3a;
+$brand-tertiary__text: #fff;
+$brand-tertiary--light: lighten($brand-tertiary, 10);
+$brand-tertiary--dark: darken($brand-tertiary, 10);
+$brand-quaternary: #fff;
+$brand-quaternary__text: $brand-tertiary;
+$brand-quaternary--light: lighten($brand-quaternary, 10);
+$brand-quaternary--dark: darken($brand-quaternary, 10);
+
+// =============================================================================
+// Containers
+// =============================================================================
+$page: $brand-tertiary;
+$page__text: $brand-tertiary__text;
+$panel: #fff;
+$panel__header: $brand-secondary;
+$panel__text: #646872;
+
+// =============================================================================
+// Notices
+// =============================================================================
+$info: $brand-secondary;
+$info__text: $brand-secondary__text;
+$success: #40aa8c;
+$success__text: #fff;
+$success--light: lighten(#40aa8c, 20);
+$success--dark: dark(#40aa8c, 20);
+$warning: #fdd547;
+$warning__text: #fff;
+$warning--light: lighten(#fdd547, 10);
+$warning--dark: darken(#fdd547, 10);
+$negative: $brand-primary;
+$negative__text: $brand-primary__text;
+
+// =============================================================================
+// Light
+// =============================================================================
+$light-background: $brand-quaternary;
+$light-text: $brand-quaternary__text;
+$light-header: $brand-secondary;
+$light-input-background: $brand-quaternary--dark;
+$light-input-text: $brand-quaternary__text;
+$light-input-disabled-background: transparentize($brand-tertiary--dark, 0.95);
+$light-input-disabled-text: $brand-quaternary;
+
+// =============================================================================
+// Dark
+// =============================================================================
+$dark-background: $brand-tertiary;
+$dark-text: $brand-tertiary__text;
+$dark-header: $brand-secondary;
+$dark-input-background: $brand-tertiary--light;
+$dark-input-text: $brand-tertiary__text;
+$dark-input-disabled-background: transparentize($brand-tertiary--light, 0.6);
+$dark-input-disabled-text: $brand-tertiary;
+
+// =============================================================================
+// Buttons
+// =============================================================================
+// $default-button: #ededed;
+// $default-button__text: $pane__text;
+// $default-button__outset: #d7d7d7;
+// $default-button__inset: #fff;
+// $default-button__press: #fff;
+// $default-button__press-text: $default-button__text;
+// $default-button__disabled: #fff;
+// $default-button__disabled-text: $default-button;
+// $beta-button: #2e5c81;
+// $beta-button__text: #fff;
+// $beta-button__outset: darken($beta-button, 5%);
+// $beta-button__press: darken($beta-button, 10%);
+// $beta-button__press-text: #fff;
+// $proceed-button: $proceed;
+// $proceed-button__text: $proceed__text;
+// $feature-button: #21a3d3;
+// $gold-button: #fccc5e;
+
+
 
 // Color
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 $color-initial: #fff !default;
-$color-primary: #9b4dca !default;
-$color-secondary: #606c76 !default;
-$color-tertiary: #f4f5f6 !default;
+$color-primary: #f15a29 !default;
+$color-secondary: #2baae1 !default;
+$color-tertiary: #40aa8c !default;
 $color-quaternary: #d1d1d1 !default;
 $color-quinary: #e1e1e1 !default;

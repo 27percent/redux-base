@@ -1,0 +1,211 @@
+/**
+ * Margin and padding helper classes. Use these to tweak layout on a micro
+ * level.
+ *
+ * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+*/
+
+$utility-spacing-margin:            $base-spacing;
+$utility-spacing-margin--small:     $utility-spacing-margin / 2;
+$utility-spacing-margin--tiny:      $utility-spacing-margin / 4;
+$utility-spacing-margin--large:     $utility-spacing-margin * 2;
+$utility-spacing-margin--huge:      $utility-spacing-margin * 4;
+
+$utility-spacing-padding:           $base-spacing;
+$utility-spacing-padding--small:    $utility-spacing-padding / 2;
+$utility-spacing-padding--tiny:     $utility-spacing-padding / 4;
+$utility-spacing-padding--large:    $utility-spacing-padding * 2;
+$utility-spacing-padding--huge:     $utility-spacing-padding * 4;
+
+/**
+ * Margin helper classes.
+ *
+ * Add margins.
+ */
+.u-m     { margin:           $utility-spacing-margin !important; }
+.u-mt    { margin-top:       $utility-spacing-margin !important; }
+.u-mr    { margin-right:     $utility-spacing-margin !important; }
+.u-mb    { margin-bottom:    $utility-spacing-margin !important; }
+.u-ml    { margin-left:      $utility-spacing-margin !important; }
+.u-mh    { margin-right:     $utility-spacing-margin !important; margin-left:      $utility-spacing-margin !important; }
+.u-mv    { margin-top:       $utility-spacing-margin !important; margin-bottom:    $utility-spacing-margin !important; }
+
+/**
+ * Add tiny margins.
+ */
+.u-m--   { margin:           $utility-spacing-margin--tiny !important; }
+.u-mt--  { margin-top:       $utility-spacing-margin--tiny !important; }
+.u-mr--  { margin-right:     $utility-spacing-margin--tiny !important; }
+.u-mb--  { margin-bottom:    $utility-spacing-margin--tiny !important; }
+.u-ml--  { margin-left:      $utility-spacing-margin--tiny !important; }
+.u-mh--  { margin-right:     $utility-spacing-margin--tiny !important; margin-left:     $utility-spacing-margin--tiny !important; }
+.u-mv--  { margin-top:       $utility-spacing-margin--tiny !important; margin-bottom:   $utility-spacing-margin--tiny !important; }
+
+/**
+ * Add small margins.
+ */
+.u-m-    { margin:           $utility-spacing-margin--small !important; }
+.u-mt-   { margin-top:       $utility-spacing-margin--small !important; }
+.u-mr-   { margin-right:     $utility-spacing-margin--small !important; }
+.u-mb-   { margin-bottom:    $utility-spacing-margin--small !important; }
+.u-ml-   { margin-left:      $utility-spacing-margin--small !important; }
+.u-mh-   { margin-right:     $utility-spacing-margin--small !important; margin-left:   $utility-spacing-margin--small !important; }
+.u-mv-   { margin-top:       $utility-spacing-margin--small !important; margin-bottom: $utility-spacing-margin--small !important; }
+
+/**
+ * Add large margins.
+ */
+.u-m\+   { margin:           $utility-spacing-margin--large !important; }
+.u-mt\+  { margin-top:       $utility-spacing-margin--large !important; }
+.u-mr\+  { margin-right:     $utility-spacing-margin--large !important; }
+.u-mb\+  { margin-bottom:    $utility-spacing-margin--large !important; }
+.u-ml\+  { margin-left:      $utility-spacing-margin--large !important; }
+.u-mh\+  { margin-right:     $utility-spacing-margin--large !important; margin-left:      $utility-spacing-margin--large !important; }
+.u-mv\+  { margin-top:       $utility-spacing-margin--large !important; margin-bottom:    $utility-spacing-margin--large !important; }
+
+/**
+ * Add huge margins.
+ */
+.u-m\+\+     { margin:           $utility-spacing-margin--huge !important; }
+.u-mt\+\+    { margin-top:       $utility-spacing-margin--huge !important; }
+.u-mr\+\+    { margin-right:     $utility-spacing-margin--huge !important; }
+.u-mb\+\+    { margin-bottom:    $utility-spacing-margin--huge !important; }
+.u-ml\+\+    { margin-left:      $utility-spacing-margin--huge !important; }
+.u-mh\+\+    { margin-right:     $utility-spacing-margin--huge !important; margin-left:   $utility-spacing-margin--huge !important; }
+.u-mv\+\+    { margin-top:       $utility-spacing-margin--huge !important; margin-bottom: $utility-spacing-margin--huge !important; }
+
+/**
+ * Remove margins.
+ */
+.u-m0    { margin:           0 !important; }
+.u-mt0   { margin-top:       0 !important; }
+.u-mr0   { margin-right:     0 !important; }
+.u-mb0   { margin-bottom:    0 !important; }
+.u-ml0   { margin-left:      0 !important; }
+.u-mh0   { margin-right:     0 !important; margin-left:      0 !important; }
+.u-mv0   { margin-top:       0 !important; margin-bottom:    0 !important; }
+
+/**
+ * Negative margins.
+ */
+.u--m    { margin:           -$utility-spacing-margin !important; }
+.u--mt   { margin-top:       -$utility-spacing-margin !important; }
+.u--mr   { margin-right:     -$utility-spacing-margin !important; }
+.u--mb   { margin-bottom:    -$utility-spacing-margin !important; }
+.u--ml   { margin-left:      -$utility-spacing-margin !important; }
+.u--mh   { margin-right:     -$utility-spacing-margin !important; margin-left:      -$utility-spacing-margin !important; }
+.u--mv   { margin-top:       -$utility-spacing-margin !important; margin-bottom:    -$utility-spacing-margin !important; }
+
+/**
+ * Tiny negative margins.
+ */
+.u--m--  { margin:           -$utility-spacing-margin--tiny !important; }
+.u--mt-- { margin-top:       -$utility-spacing-margin--tiny !important; }
+.u--mr-- { margin-right:     -$utility-spacing-margin--tiny !important; }
+.u--mb-- { margin-bottom:    -$utility-spacing-margin--tiny !important; }
+.u--ml-- { margin-left:      -$utility-spacing-margin--tiny !important; }
+.u--mh-- { margin-right:     -$utility-spacing-margin--tiny !important; margin-left:     -$utility-spacing-margin--tiny !important; }
+.u--mv-- { margin-top:       -$utility-spacing-margin--tiny !important; margin-bottom:   -$utility-spacing-margin--huge !important; }
+
+/**
+ * Small negative margins.
+ */
+.u--m-   { margin:           -$utility-spacing-margin--small !important; }
+.u--mt-  { margin-top:       -$utility-spacing-margin--small !important; }
+.u--mr-  { margin-right:     -$utility-spacing-margin--small !important; }
+.u--mb-  { margin-bottom:    -$utility-spacing-margin--small !important; }
+.u--ml-  { margin-left:      -$utility-spacing-margin--small !important; }
+.u--mh-  { margin-right:     -$utility-spacing-margin--small !important; margin-left:   -$utility-spacing-margin--small !important; }
+.u--mv-  { margin-top:       -$utility-spacing-margin--small !important; margin-bottom: -$utility-spacing-margin--small !important; }
+
+/**
+ * Large negative margins.
+ */
+.u--m\+  { margin:           -$utility-spacing-margin--large !important; }
+.u--mt\+ { margin-top:       -$utility-spacing-margin--large !important; }
+.u--mr\+ { margin-right:     -$utility-spacing-margin--large !important; }
+.u--mb\+ { margin-bottom:    -$utility-spacing-margin--large !important; }
+.u--ml\+ { margin-left:      -$utility-spacing-margin--large !important; }
+.u--mh\+ { margin-right:     -$utility-spacing-margin--large !important; margin-left:      -$utility-spacing-margin--large !important; }
+.u--mv\+ { margin-top:       -$utility-spacing-margin--large !important; margin-bottom:    -$utility-spacing-margin--large !important; }
+
+/**
+ * Huge negative margins.
+ */
+.u--m\+\+    { margin:           -$utility-spacing-margin--huge !important; }
+.u--mt\+\+   { margin-top:       -$utility-spacing-margin--huge !important; }
+.u--mr\+\+   { margin-right:     -$utility-spacing-margin--huge !important; }
+.u--mb\+\+   { margin-bottom:    -$utility-spacing-margin--huge !important; }
+.u--ml\+\+   { margin-left:      -$utility-spacing-margin--huge !important; }
+.u--mh\+\+   { margin-right:     -$utility-spacing-margin--huge !important; margin-left:   -$utility-spacing-margin--huge !important; }
+.u--mv\+\+   { margin-top:       -$utility-spacing-margin--huge !important; margin-bottom: -$utility-spacing-margin--huge !important; }
+
+
+
+/**
+ * Padding helper classes.
+ *
+ * Add paddings.
+ */
+.u-p     { padding:          $utility-spacing-padding !important; }
+.u-pt    { padding-top:      $utility-spacing-padding !important; }
+.u-pr    { padding-right:    $utility-spacing-padding !important; }
+.u-pb    { padding-bottom:   $utility-spacing-padding !important; }
+.u-pl    { padding-left:     $utility-spacing-padding !important; }
+.u-ph    { padding-right:    $utility-spacing-padding !important; padding-left:    $utility-spacing-padding !important; }
+.u-pv    { padding-top:      $utility-spacing-padding !important; padding-bottom:  $utility-spacing-padding !important; }
+
+/**
+ * Add tiny paddings.
+ */
+.u-p--   { padding:           $utility-spacing-padding--tiny !important; }
+.u-pt--  { padding-top:       $utility-spacing-padding--tiny !important; }
+.u-pr--  { padding-right:     $utility-spacing-padding--tiny !important; }
+.u-pb--  { padding-bottom:    $utility-spacing-padding--tiny !important; }
+.u-pl--  { padding-left:      $utility-spacing-padding--tiny !important; }
+.u-ph--  { padding-right:     $utility-spacing-padding--tiny !important; padding-left:      $utility-spacing-padding--tiny !important; }
+.u-pv--  { padding-top:       $utility-spacing-padding--tiny !important; padding-bottom:    $utility-spacing-padding--tiny !important; }
+
+/**
+ * Add small paddings.
+ */
+.u-p-    { padding:           $utility-spacing-padding--small !important; }
+.u-pt-   { padding-top:       $utility-spacing-padding--small !important; }
+.u-pr-   { padding-right:     $utility-spacing-padding--small !important; }
+.u-pb-   { padding-bottom:    $utility-spacing-padding--small !important; }
+.u-pl-   { padding-left:      $utility-spacing-padding--small !important; }
+.u-ph-   { padding-right:     $utility-spacing-padding--small !important; padding-left:    $utility-spacing-padding--small !important; }
+.u-pv-   { padding-top:       $utility-spacing-padding--small !important; padding-bottom:  $utility-spacing-padding--small !important; }
+
+/**
+ * Add large paddings.
+ */
+.u-p\+   { padding:           $utility-spacing-padding--large !important; }
+.u-pt\+  { padding-top:       $utility-spacing-padding--large !important; }
+.u-pr\+  { padding-right:     $utility-spacing-padding--large !important; }
+.u-pb\+  { padding-bottom:    $utility-spacing-padding--large !important; }
+.u-pl\+  { padding-left:      $utility-spacing-padding--large !important; }
+.u-ph\+  { padding-right:     $utility-spacing-padding--large !important; padding-left:   $utility-spacing-padding--large !important; }
+.u-pv\+  { padding-top:       $utility-spacing-padding--large !important; padding-bottom: $utility-spacing-padding--large !important; }
+
+/**
+ * Add huge paddings.
+ */
+.u-p\+\+     { padding:           $utility-spacing-padding--huge !important; }
+.u-pt\+\+    { padding-top:       $utility-spacing-padding--huge !important; }
+.u-pr\+\+    { padding-right:     $utility-spacing-padding--huge !important; }
+.u-pb\+\+    { padding-bottom:    $utility-spacing-padding--huge !important; }
+.u-pl\+\+    { padding-left:      $utility-spacing-padding--huge !important; }
+.u-ph\+\+    { padding-right:     $utility-spacing-padding--huge !important; padding-left:    $utility-spacing-padding--huge !important; }
+.u-pv\+\+    { padding-top:       $utility-spacing-padding--huge !important; padding-bottom:  $utility-spacing-padding--huge !important; }
+
+/**
+ * Remove paddings.
+ */
+.u-p0    { padding:          0 !important; }
+.u-pt0   { padding-top:      0 !important; }
+.u-pr0   { padding-right:    0 !important; }
+.u-pb0   { padding-bottom:   0 !important; }
+.u-pl0   { padding-left:     0 !important; }
+.u-ph0   { padding-right:    0 !important; padding-left:     0 !important; }
+.u-pv0   { padding-top:      0 !important; padding-bottom:   0 !important; }

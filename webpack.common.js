@@ -25,28 +25,93 @@ module.exports = {
           presets: ['react']
         }
       },
-      {
-        test:/\.(s*)css$/, 
-        use: ExtractTextPlugin.extract({ 
-          fallback:'style-loader',
-          use:['css-loader','sass-loader'],
-        })
+      { test: /\.svg$/, 
+        loader: 'url-loader',
+        include: [ path.resolve(__dirname, "public/fonts") ],
+        options: {
+          publicPath: '../',
+          fallback: 'file-loader',
+          limit: 65000, 
+          mimetype: 'image/svg+xml',
+          name: './fonts/[name].[ext]'
+        }
       },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
+      { test: /\.woff$/, 
+        loader: 'url-loader',
+        include: [ path.resolve(__dirname, "public/fonts") ],
+        options: {
+          publicPath: '../',
+          fallback: 'file-loader',
+          limit: 65000, 
+          mimetype: 'application/font-woff',
+          name: './fonts/[name].[ext]'
+        }
       },
+      { test: /\.woff2$/, 
+        loader: 'url-loader',
+        include: [ path.resolve(__dirname, "public/fonts") ],
+        options: {
+          publicPath: '../',
+          fallback: 'file-loader',
+          limit: 65000, 
+          mimetype: 'application/font-woff2',
+          name: './fonts/[name].[ext]'
+        }
+      },
+      { test: /\.[ot]tf$/, 
+        loader: 'url-loader',
+        include: [ path.resolve(__dirname, "public/fonts") ],
+        options: {
+          publicPath: '../',
+          fallback: 'file-loader',
+          limit: 65000, 
+          mimetype: 'application/octet-stream',
+          name: './fonts/[name].[ext]'
+        }
+      },
+      { test: /\.eot$/, 
+        loader: 'url-loader',
+        include: [ path.resolve(__dirname, "public/fonts") ],
+        options: {
+          publicPath: '../',
+          fallback: 'file-loader',
+          limit: 65000, 
+          mimetype: 'application/vnd.ms-fontobject',
+          name: './fonts/[name].[ext]'
+        }
+      },
+      // {
+      //   test: /\.(svg)$/,
+      //   use: [
+      //     {
+      //       loader: 'file-loader'
+      //     }
+      //   ]
+      // },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        include: [ path.resolve(__dirname, "public/images") ],
         use: [
           {
             loader: 'url-loader',
             options: {
               fallback: 'file-loader',
+              name: 'public/images/[name].[ext]',
               limit: 8192
             }
           }
         ]
+      },
+      {
+        test:/\.(s*)css$/, 
+        use: ExtractTextPlugin.extract({ 
+          fallback:'style-loader',
+          use:['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap'],
+        })
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },

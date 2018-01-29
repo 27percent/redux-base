@@ -1,0 +1,30 @@
+.c-header {
+
+}
+
+.c-header__left,
+.c-header__right {
+  display: inline-block;
+  vertical-align: middle;
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+}
+
+.c-header__left {
+  justify-content: flex-start;
+  &>* {
+    vertical-align: middle;
+  }
+}
+
+.c-header__right {
+  text-align: right;
+  justify-content: flex-end;
+  &>* {
+    vertical-align: middle;
+  }
+}

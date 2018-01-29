@@ -1,0 +1,14 @@
+.o-overflow-hidden {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.o-overflow-y-scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.o-overflow-x-scrollable {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

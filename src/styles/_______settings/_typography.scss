@@ -1,1 +1,72 @@
-$base-font-family: 'Helvetica', 'Arial', sans-serif;
+$base-font-size: 16px;
+$base-line-height: 24px;
+$base-font-family: 'IO Round', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-weight: 400;
+
+
+// IO Round
+// =============================================================
+
+@font-face {
+  font-family: 'IO Round';
+  src: url('../../public/fonts/io-round/ioround-bold_italic-webfont.woff2') format('woff2'),
+       url('../../public/fonts/io-round/ioround-bold_italic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'IO Round';
+  src: url('../../public/fonts/io-round/ioround-bold-webfont.woff2') format('woff2'),
+       url('../../public/fonts/io-round/ioround-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IO Round';
+  src: url('../../public/fonts/io-round/ioround-light_italic-webfont.woff2') format('woff2'),
+       url('../../public/fonts/io-round/ioround-light_italic-webfont.woff') format('woff');
+  font-weight: light;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'IO Round';
+  src: url('../../public/fonts/io-round/ioround-light-webfont.woff2') format('woff2'),
+       url('../../public/fonts/io-round/ioround-light-webfont.woff') format('woff');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IO Round';
+  src: url('../../public/fonts/io-round/ioround-regular_italic-webfont.woff2') format('woff2'),
+       url('../../public/fonts/io-round/ioround-regular_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'IO Round';
+  src: url('../../public/fonts/io-round/ioround-regular-webfont.woff2') format('woff2'),
+       url('../../public/fonts/io-round/ioround-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IO Round';
+  src: url('../../public/fonts/io-round/ioround-thin_italic-webfont.woff2') format('woff2'),
+       url('../../public/fonts/io-round/ioround-thin_italic-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+    font-family: 'IO Round';
+    src: url('../../public/fonts/io-round/ioround-thin-webfont.woff2') format('woff2'),
+         url('../../public/fonts/io-round/ioround-thin-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}

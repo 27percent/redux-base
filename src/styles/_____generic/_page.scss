@@ -1,5 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
 html,
 body {
-    height: 100%;
-    width: 100%;
+  width: 100%;
+  background: $page;
+  color: $page__text;
+  font-size: ($base-font-size / 16px) * 1em;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height / $base-font-size;
+  overflow-y: scroll;
+  min-height: 100%;
+}
+
+address,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, ol, ul,
+figure,
+hr,
+table,
+fieldset {
+  margin-bottom: $base-spacing-small;
+}
+
+.o-btn,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $base-font-family;
+  margin-bottom: $base-spacing-small
+}
+
+dd, ol, ul {
+  margin-left: $base-spacing-small;
 }

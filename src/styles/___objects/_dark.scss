@@ -1,0 +1,39 @@
+.o-dark {
+  background: $dark-background;
+  color: $dark-text;
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark-header;
+  }
+
+  input[type='email'],
+  input[type='number'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='url'],
+  textarea,
+  select {
+    border: none;
+    background-color: $dark-input-background;
+    color: $dark-input-text;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &[disabled] {
+      background-color: $dark-input-disabled-background;
+      color: $dark-input-disabled-text;      
+    }
+  }
+
+  select {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#fff" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
+    background-color: $dark-input-background;
+    &:focus {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#fff" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
+    }
+  }
+}

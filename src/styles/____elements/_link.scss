@@ -1,13 +1,9 @@
-
-// Link
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
 a {
-	color: $color-primary;
+	color: $brand-secondary;
 	text-decoration: none;
 
 	&:focus,
 	&:hover {
-		color: $color-secondary;
+		color: $brand-secondary--light;
 	}
 }

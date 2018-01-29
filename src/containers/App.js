@@ -36,9 +36,7 @@ class App extends Component {
       <p style={{ backgroundColor: '#e99', padding: 10 }}>
         <b>{errorMessage}</b>
         {' '}
-        <button onClick={this.handleDismissClick}>
-          Dismiss
-        </button>
+        <button onClick={this.handleDismissClick}>Dismiss</button>
       </p>
     )
   }
@@ -47,8 +45,7 @@ class App extends Component {
     const { children, inputValue } = this.props
     return (
       <div>
-        <Explore value={inputValue}
-                 onChange={this.handleChange} />
+        <Explore value={inputValue} onChange={this.handleChange} />
         <hr />
         {this.renderErrorMessage()}
         {children}

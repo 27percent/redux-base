@@ -1,0 +1,14 @@
+$base-spacing: round($base-line-height) !default;
+
+$base-spacing-factor-tiny: 0.25;
+$base-spacing-factor-small: 0.5;
+$base-spacing-factor-large: 2;
+$base-spacing-factor-huge: 4;
+
+$base-spacing-tiny:  round($base-spacing * $base-spacing-factor-tiny);
+$base-spacing-small: round($base-spacing * $base-spacing-factor-small);
+$base-spacing:       $base-spacing;
+$base-spacing-large: round($base-spacing * $base-spacing-factor-large);
+$base-spacing-huge:  round($base-spacing * $base-spacing-factor-huge);
+
+$base-border-radius: 3px;

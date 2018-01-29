@@ -4,21 +4,16 @@ import { createLogger } from 'redux-logger'
 import api from '../middleware/api'
 import rootReducer from '../reducers'
 import saga from '../sagas'
-import DevTools from '../containers/DevTools'
 
 const configureStore = preloadedState => {
   const sagaMiddleware = createSagaMiddleware();
   const store = createStore(
     rootReducer,
     preloadedState,
-    compose(
-      applyMiddleware(sagaMiddleware, api, createLogger()),
-      DevTools.instrument()
-    )
+    applyMiddleware(sagaMiddleware, api, createLogger())
   )
 
   if (module.hot) {
-    // Enable Webpack hot module replacement for reducers
     module.hot.accept('../reducers', () => {
       store.replaceReducer(rootReducer)
     })
