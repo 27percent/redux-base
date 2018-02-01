@@ -1,0 +1,66 @@
+.c-welcome-page {
+  overflow: scroll;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  @include breakpoint(tablet-portrait-up) {
+    flex-direction: row;
+    overflow: hidden;
+  }
+}
+
+.c-welcome-page .c-composer-logo {
+  display: block;
+  height: 120px; width: 120px;
+  margin: $base-spacing auto;
+
+  @include breakpoint(tablet-portrait-up) {
+    margin: 0;
+    height: 150px; width: 150px;
+  }
+
+  @include breakpoint(tablet-landscape-up) {
+    margin: 0;
+    height: 300px; width: 300px;
+  }
+}
+
+.c-welcome-page__left-column,
+.c-welcome-page__right-column {
+  padding: $base-spacing;
+
+  @include breakpoint(tablet-portrait-up) {
+    flex: 1;
+    overflow: hidden;
+  }
+}
+
+.c-welcome-page__left-column {
+
+  @include breakpoint(tablet-portrait-up) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.c-welcome-page__right-column {
+  flex: 1;
+
+  @include breakpoint(tablet-portrait-up) {
+    display: flex;
+    overflow: scroll;
+  }
+
+  @include breakpoint(tablet-landscape-up) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+  }
+}
+
+.c-welcome-page__right-column__content {
+
+}

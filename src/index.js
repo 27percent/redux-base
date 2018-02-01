@@ -19,11 +19,12 @@ import { render } from 'react-dom'
 import configureStore from './store/configureStore'
 
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect, Switch, Link } from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux'
 
 import App from './containers/App'
 import ConfiguratorPageContainer from './containers/ConfiguratorPageContainer'
+import WelcomePageContainer from './containers/WelcomePageContainer'
 
 import createBrowserHistory from 'history/createBrowserHistory';
 const history = createBrowserHistory();
@@ -34,7 +35,8 @@ render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Switch>
-        <Route exact path="/" component={App}/>
+        <Redirect exact from='/' to='/welcome'/>
+        <Route path="/welcome" component={WelcomePageContainer}/>
         <Route path="/composer" component={ConfiguratorPageContainer}/>
       </Switch>
     </ConnectedRouter>

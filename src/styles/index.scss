@@ -1,4 +1,5 @@
 // SETTINGS
+@import './_______settings/breakpoints';
 @import './_______settings/colors';
 @import './_______settings/typography';
 @import './_______settings/spacing';
@@ -33,8 +34,10 @@
 // COMPONENTS
 @import './__components/board-selector';
 @import './__components/composer-logo';
+@import './__components/footer';
 @import './__components/header';
 @import './__components/layout-main';
+@import './__components/welcome-page';
 
 // UTILITIES
 @import './_utilities/layout';

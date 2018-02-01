@@ -1,10 +1,10 @@
 import merge from 'lodash/merge'
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
-import sidebar from './sidebar';
+import app from './app';
 
 const rootReducer = combineReducers({
-  sidebar,
+  app,
   routing: routerReducer
 })
 

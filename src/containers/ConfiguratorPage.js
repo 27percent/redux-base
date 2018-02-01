@@ -8,15 +8,13 @@ class ConfiguratorPage extends Component {
   static propTypes = {}
 
   render() {
-    
     return (
       <div className='o-flex-full-height-container o-overflow-hidden c-layout-main'> 
 
-        <section className='o-flex-full-height-y-scrollable o-dark c-layout-main__left-column'>
-          <div>
+        <section className='o-flex-full-height-y-scrollable o-flex-container o-flex-col o-dark c-layout-main__left-column'>
 
             <div className='o-flex-container c-header'>
-              <div className='o-flex-full-height c-header__left'>
+              <div className=' c-header__left'>
                 <div className='c-composer-logo' />
                 <select className='c-board-selector u-ml'>
                   <option value="" disabled selected>Select a board...</option>
@@ -27,12 +25,14 @@ class ConfiguratorPage extends Component {
                 </select>
               </div>
 
-              <div className='o-flex-full-height c-header__right'>
+              <div className='o-flex-full-height-container c-header__middle'></div>
+
+              <div className=' c-header__right'>
                 <a className='o-btn o-btn-secondary u-mr- u-mb0' onClick={this.props.toggleSidebar}>Sidebar</a>
                 <a className='o-btn o-btn-secondary u-mr- u-mb0' onClick={this.props.toggleSidebarWide}>Sidebar Wide</a>
                 <a className='o-btn o-btn-primary u-mr- u-mb0'>Load</a>
                 <a className='o-btn o-btn-success u-mb0'>Save</a>
-              </div>              
+              </div>            
             </div>
 
 
@@ -58,7 +58,30 @@ class ConfiguratorPage extends Component {
               // <a className='o-btn o-btn-success u-mr-'>Success</a>
               // <a className='o-btn o-btn-warning u-mr-'>Warning</a>
             }
-          </div>
+
+            <div className='o-flex-full-height-container'></div>
+
+            <div className='o-flex-container c-footer'>
+              <div className='o-flex-full-height-container c-footer__left'>
+                <p className='u-mr- u-mb0'>LAYOUT:</p>
+                <input className='o-flex-full-height u-mb0' type='text' placeholder='Give your layout a name...' />
+              </div>
+
+              <div className='o-flex-full-height-container c-footer__middle'></div>
+
+              <div className='o-flex-full-height-container c-footer__right'>
+                <p className='u-mr- u-mb0'>LAYER:</p>
+                <select className='o-flex-full-height u-mb0'>
+                  <option value="" disabled selected>Select a board...</option>
+                  <option value="volvo">Xylophone S</option>
+                  <option value="saab">Xylophone M</option>
+                  <option value="mercedes">Xylophone L</option>
+                  <option value="audi">M10-A</option>
+                </select>
+                <a className='o-btn o-btn-secondary u-ml- u-mb0' onClick={this.props.toggleSidebar}>Flash</a>
+              </div>            
+            </div>
+
         </section>
 
         <aside className={classNames('o-flex-container o-overflow-y-scrollable o-flex-100 o-light c-layout-main__right-column', {'c-layout-main__right-column--open': this.props.sidebar.open}, {'c-layout-main__right-column--open-wide': this.props.sidebar.openWide} )}>

@@ -15,15 +15,12 @@
 }
 
 .c-header__left {
-  justify-content: flex-start;
   &>* {
     vertical-align: middle;
   }
 }
 
 .c-header__right {
-  text-align: right;
-  justify-content: flex-end;
   &>* {
     vertical-align: middle;
   }

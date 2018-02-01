@@ -1,0 +1,36 @@
+.c-footer {
+/*  position: absolute;
+  left: $base-spacing;
+  right: $base-spacing;*/
+}
+
+.c-footer__left,
+.c-footer__right {
+/*  display: inline-block;*/
+  vertical-align: middle;
+/*  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }*/
+}
+
+.c-footer__left {
+  //justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  &>* {
+    vertical-align: middle;
+  }
+}
+
+.c-footer__right {
+  // text-align: right;
+  // justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  &>* {
+    vertical-align: middle;
+  }
+}

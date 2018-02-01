@@ -2,12 +2,9 @@ $panel-width: 380px;
 
 .c-layout-main {
   position: relative;
-  height: 100vh;
 
   > section {
-    height: 100vh;
-    max-height: 100vh;
-    max-width: 100vw;
+
   }
 }
 
@@ -17,6 +14,7 @@ $panel-width: 380px;
 
 .c-layout-main__left-column,
 .c-layout-main__right-column {
+  position: relative;
   padding: $base-spacing;
 }
 
