@@ -1,6 +1,7 @@
 // 3rd Party Modules
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -22,6 +23,9 @@ module.exports = {
         minifyCSS: true,
         minifyURLs: true,
       }
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: path.resolve(__dirname, 'public', '_redirects'), to: './_redirects', toType: 'file' }
+    ])
   ]
 };

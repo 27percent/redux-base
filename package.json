@@ -26,6 +26,7 @@
     "circular-dependency-plugin": "^4.4.0",
     "clean-webpack-plugin": "^0.1.17",
     "concurrently": "^3.5.1",
+    "copy-webpack-plugin": "^4.4.1",
     "coveralls": "^3.0.0",
     "css-loader": "^0.28.9",
     "css-mqpacker": "^6.0.2",
