@@ -63,3 +63,11 @@ input[type='submit'] {
 .o-btn--full {
   width: 100%;
 }
+
+.expand {
+	width: 100%;
+
+	@include breakpoint(tablet-portrait-up) {
+		width: auto;
+	}
+}

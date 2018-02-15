@@ -1,0 +1,64 @@
+.c-key {
+  display: inline-block;
+  width: 71px;
+  height: 71px;
+  margin: 2px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  &:hover {
+    border: 1px solid $brand-secondary;
+  }
+}
+
+.c-board-svg__container {
+  overflow-x: scroll;
+  margin: $base-spacing auto;
+}
+
+
+.c-board-svg {
+  line-height: 0;
+  display: block; 
+  margin: auto; 
+  position: relative;
+  overflow: scroll;
+
+  svg {
+    display: block;
+  }
+
+  .c-feature-outline {
+    stroke: #fff;
+  }
+
+  .clickable {
+    cursor: pointer;
+  }
+
+  .clickable:hover .c-feature-outline {
+    stroke: $brand-secondary;
+  }
+
+}
+
+
+.c-board-feature-generic-container {
+  text-align: center;
+  width: 100%;
+  overflow: scroll;
+}
+
+.c-board-feature-generic {
+  padding: $base-spacing-small;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  display: inline-block;
+  margin: $base-spacing-small;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $brand-secondary;
+  }
+}

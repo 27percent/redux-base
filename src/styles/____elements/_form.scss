@@ -11,12 +11,12 @@ select {
   -moz-appearance: none;
   appearance: none;
 	background-color: $dark-input-background;
-	border: none;
+	border: 1px solid $dark-input-background;
 	border-radius: $base-border-radius;
 	box-shadow: none;
 	box-sizing: inherit; // Forced to replace inherit values of the normalize.css
 	color: $dark-input-text;
-	height: $base-line-height + ($base-spacing-small*2);
+	height: $base-line-height + 2 + ($base-spacing-small*2);
 	padding: $base-spacing-small;
 	width: 100%;
 

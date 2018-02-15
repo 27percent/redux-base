@@ -1,0 +1,37 @@
+.c-slim-tabbed-nav__tabs {
+  display: flex;
+
+  @include breakpoint(tablet-portrait-up) {
+    display: inline-flex;
+  }
+}
+
+.c-slim-tabbed-nav__tab {
+  flex: 1;
+  border-bottom: 5px solid $light-input-background;
+  padding: $base-spacing-tiny $base-spacing;
+  margin: 0;
+  text-align: center;
+  color: $light-text;
+
+  @include breakpoint(tablet-portrait-up) {
+    flex: initial;
+    text-align: initial;
+  }
+
+  &.o-dark {
+    border-color: $dark-input-background;
+    color: $dark-text;
+  }
+
+  &.selected,
+  &:hover {
+    border-color: $brand-secondary;
+    color: $light-text;
+
+    &.o-dark {
+      border-color: $brand-secondary;
+      color: $dark-text;
+    }
+  }
+}

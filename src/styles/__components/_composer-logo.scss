@@ -1,8 +1,35 @@
 .c-composer-logo {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url('../../public/images/svgs/composer-c-logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include breakpoint(tablet-portrait-up) {
+    width: 300px;
+    height: 60px;
+    display: inline-block;
+    background-image: url('../../public/images/svgs/composer-full-logo2.svg');
+    background-size: contain;
+    background-repeat: no-repeat;   
+  }
+
+  @include breakpoint(tablet-landscape-up) {
+    width: 300px;
+    height: 60px;
+    display: inline-block;
+    background-image: url('../../public/images/svgs/composer-full-logo2.svg');
+    background-size: contain;
+    background-repeat: no-repeat;   
+  }
+}
+
+.c-composer-logo.c-composer-logo--c {
   width: 80px;
   height: 80px;
   display: inline-block;
   background-image: url('../../public/images/svgs/composer-c-logo.svg');
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
 }

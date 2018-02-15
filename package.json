@@ -7,7 +7,8 @@
     "start:dev": "webpack-dev-server",
     "start:ngrok": "ngrok http --host-header=rewrite 8086",
     "start:local": "npm run start:dev && ngrok http --host-header=rewrite 8086",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && NODE_ENV=production webpack --config ./webpack.config.js --progress --profile --colors"
   },
   "author": "Josh Black",
   "license": "ISC",
@@ -28,6 +29,7 @@
     "coveralls": "^3.0.0",
     "css-loader": "^0.28.9",
     "css-mqpacker": "^6.0.2",
+    "dotenv": "^5.0.0",
     "enzyme": "^3.3.0",
     "eslint": "^4.16.0",
     "eslint-loader": "^1.9.0",
@@ -51,6 +53,7 @@
     "sass-lint": "^1.12.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
+    "svg-inline-loader": "^0.8.0",
     "uglifyjs-webpack-plugin": "^1.1.6",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
@@ -64,6 +67,7 @@
     "classnames": "^2.2.5",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
+    "json-loader": "^0.5.7",
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
     "normalizr": "^3.2.4",
@@ -73,10 +77,13 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.9",
+    "react-svg-pan-zoom": "^2.15.1",
+    "react-virtualized": "^9.18.5",
     "redux": "^3.7.2",
     "redux-immutable": "^4.0.0",
     "redux-saga": "^0.16.0",
     "request": "^2.83.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "rimraf": "^2.6.2"
   }
 }

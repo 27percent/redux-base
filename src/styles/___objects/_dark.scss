@@ -15,7 +15,8 @@
   input[type='url'],
   textarea,
   select {
-    border: none;
+  appearance: none;
+    border-color: $dark-input-background;
     background-color: $dark-input-background;
     color: $dark-input-text;
 
@@ -24,6 +25,7 @@
     }
 
     &[disabled] {
+      border-color: $dark-input-background;
       background-color: $dark-input-disabled-background;
       color: $dark-input-disabled-text;      
     }
