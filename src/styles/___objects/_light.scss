@@ -16,6 +16,7 @@
   textarea,
   select {
     appearance: none;
+    border-color: $light-input-background;
     background-color: $light-input-background;
     color: $light-input-text;
 
@@ -25,6 +26,7 @@
     }
 
     &[disabled] {
+      border-color: $light-input-background;
       background-color: $light-input-disabled-background;
       color: $light-input-disabled-text;      
     }

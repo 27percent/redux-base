@@ -1,0 +1,110 @@
+{
+  "board": {
+    "id": 1,
+    "meta": {
+      "name": "Xylophone S",
+      "version": "1.0.0",
+      "creator": "Interactive Objects",
+      "description": "Xylophone modular javascript keyboard",
+      "website": "http://io.works/products/xylophone-s"
+    },
+    "electronic": {
+      "configFileName": "xylophone-s_1-0-0"
+    },
+    "display": {
+      "directory": "xyloboard-s",
+      "width": 1138, 
+      "height": 341.223,
+      "outline": {
+        "width": 1138, 
+        "height": 341.223,
+        "top": 0,
+        "left": 0,
+        "svg": "outline.svg"
+      },
+      "keys": {
+        "regions": [
+          {
+            "left": 18.589,
+            "top": 18.589,
+            "width:": 1055.14,
+            "height": 305.698,
+            "rows": [ "D1", "D2", "D3", "D4" ],
+            "cols": [ "D6", "D7", "D8", "D9", "D10", "D11", "D12", "D13", "D14", "D15", "C1", "C2", "C3", "C4" ],
+            "keyblocks": true
+          }
+        ]
+      },
+      "features": [
+        {
+          "name": "Backlight",
+          "type": "backlight",
+          "rgb": false,
+          "biColor": false,
+          "perKey": false
+        },
+        {
+          "name": "Underglow",
+          "type": "underglow",
+          "rgb": false,
+          "biColor": false,
+          "visible": false
+        },
+        {
+          "name": "Indicator 1",
+          "type": "light",
+          "rgb": false,
+          "biColor": [ "#f00", "#fff" ],
+          "visible": true,
+          "width": 7.494,
+          "height": 7.494,
+          "left": 1101.021,
+          "top": 266.969,
+          "svg": "indicator.svg"
+        },
+        {
+          "name": "Indicator 2",
+          "type": "light",
+          "rgb": true,
+          "visible": true,
+          "width": 7.494,
+          "height": 7.494,
+          "left": 1101.021,
+          "top": 285.99,
+          "svg": "indicator.svg"
+        },
+        {
+          "name": "Indicator 3",
+          "type": "light",
+          "rgb": true,
+          "visible": true,
+          "width": 7.494,
+          "height": 7.494,
+          "left": 1101.021,
+          "top": 305.01,
+          "svg": "indicator.svg"
+        },      
+        {
+          "name": "Up Button",
+          "type": "button",
+          "visible": true,
+          "width": 34.41,
+          "height": 34.41,
+          "left": 1087.564,
+          "top": 23.472,
+          "svg": "up-button.svg"
+        },
+        {
+          "name": "Down Button",
+          "type": "button",
+          "visible": true,
+          "width": 34.41,
+          "height": 34.41,
+          "left": 1087.564,
+          "top": 76.681,
+          "svg": "down-button.svg"
+        }
+      ]
+    }
+  }
+}

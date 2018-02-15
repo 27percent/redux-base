@@ -89,8 +89,32 @@ module.exports = {
       //   ]
       // },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         include: [ path.resolve(__dirname, "public/images") ],
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              fallback: 'file-loader',
+              name: 'public/images/[name].[ext]',
+              limit: 8192
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(svg)$/,
+        include: [ path.resolve(__dirname, "public/images/svgs/boards") ],
+        use: [
+          {
+            loader: 'svg-inline-loader'
+          }
+        ]
+      },
+      {
+        test: /\.(svg)$/,
+        include: [ path.resolve(__dirname, "public/images/svgs") ],
+        exclude: [ path.resolve(__dirname, "public/images/svgs/boards") ],
         use: [
           {
             loader: 'url-loader',

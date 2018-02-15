@@ -1,11 +1,12 @@
 $panel-width: 380px;
 
+@include breakpoint(tablet-portrait-up) {
+  margin: 0;
+  height: 150px; width: 150px;
+}
+
 .c-layout-main {
   position: relative;
-
-  > section {
-
-  }
 }
 
 .c-layout-main__middle {
@@ -15,25 +16,44 @@ $panel-width: 380px;
 .c-layout-main__left-column,
 .c-layout-main__right-column {
   position: relative;
-  padding: $base-spacing;
+  padding: $base-spacing-small;
+
+  @include breakpoint(tablet-landscape-up) {
+    padding: $base-spacing;
+  }
 }
 
-.c-layout-main__left-column {
-  
-}
+.c-layout-main__left-column { }
 
 .c-layout-main__right-column {
+  position: absolute;
+  right: -100vw;
+  top: 0;
+  bottom: 0;
+  transition: right 200ms linear, margin-right 200ms linear, width 200ms linear;
+  width: 100vw;
 
-  margin-right: -#{$panel-width};
-  transition: margin-right 200ms linear, width 200ms linear;
-  width: $panel-width;
+  @include breakpoint(tablet-landscape-up) {
+    position: relative;
+    right: auto; bottom: auto; top: auto;
+    margin-right: -#{$panel-width};
+    width: $panel-width;
+  }
 
   &--open {
-    margin-right: 0;
+    right: 0;
+    @include breakpoint(tablet-landscape-up) {
+      right: auto;
+      margin-right: 0;
+    }
   }
 
   &--open-wide {
-    width: $panel-width*2;
-    margin-right: 0;
+    right: 0;
+    @include breakpoint(tablet-landscape-up) {
+      right: auto;
+      width: $panel-width*2;
+      margin-right: 0;
+    }
   }
 }

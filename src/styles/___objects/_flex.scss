@@ -14,12 +14,14 @@
   flex: 1;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .o-flex-full-height-x-scrollable {
   flex: 1;
   overflow-x: auto;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .o-flex-container {
