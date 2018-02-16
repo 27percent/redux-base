@@ -13,7 +13,7 @@
 }
 
 .c-board-svg__container {
-  overflow-x: scroll;
+  overflow-x: hidden;
   margin: $base-spacing auto;
 }
 
@@ -23,7 +23,7 @@
   display: block; 
   margin: auto; 
   position: relative;
-  overflow: scroll;
+  overflow: hidden;
 
   svg {
     display: block;
@@ -47,7 +47,7 @@
 .c-board-feature-generic-container {
   text-align: center;
   width: 100%;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .c-board-feature-generic {
