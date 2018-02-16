@@ -3,7 +3,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames';
-import BoardSVGContainer from '../components/BoardSVGContainer'
+import BoardSVGContainer from '../components/BoardSVGContainer';
+import BtnGroup from '../components/BtnGroup';
 import boardConfig from '../data/xylophone-s-1_0_0.json';
 
 class ConfiguratorPage extends Component {
@@ -34,9 +35,11 @@ class ConfiguratorPage extends Component {
               <div className='o-flex-full-height-container c-header__middle'></div>
 
               <div className='c-header__right'>
-                <a className='o-btn o-btn-primary u-mr- u-mb0' onClick={this.props.toggleSidebar}>Tap</a>
-                <a className='o-btn o-btn-primary u-mr- u-mb0' onClick={this.props.toggleSidebarWide}>Press</a>
-                <a className='o-btn o-btn-primary u-mb0'>Hold</a>
+                <BtnGroup className='u-mr- u-mb0'>
+                  <a className='o-btn o-btn-primary' onClick={this.props.toggleSidebar}>Tap</a>
+                  <a className='o-btn o-btn-quaternary' onClick={this.props.toggleSidebarWide}>Press</a>
+                  <a className='o-btn o-btn-quaternary'>Hold</a>
+                </BtnGroup>
               </div>            
             </div>
 
